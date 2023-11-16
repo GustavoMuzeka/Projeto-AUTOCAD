@@ -29,7 +29,7 @@ body {
 }
 ol, ul {
 	list-style: none;
-    width: 200px;
+    width: 100%;
 }
 blockquote, q {
 	quotes: none;
@@ -46,6 +46,56 @@ table {
 
 
 /* INICIO DO CÓDIGO */
+
+/* BOTAO WHATSAPP */
+.btn-whatsapp a {
+	color:#fff; 
+	text-decoration:none; 
+	display:block; 
+}
+.btn-whatsapp {
+    
+    position:fixed; 
+    right:0px; 
+    bottom:30px; 
+    transform: translate(-50%, -50%);  
+    background-color:rgb(37, 211, 102); 
+    width:60px; height:60px; 
+    text-align:center; 
+    line-height:58px; 
+    font-size:1.8em; 
+    color:#ffffff; 
+    font-weight:100; 
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.btn-whatsapp:before,
+.btn-whatsapp:after
+{
+	content: '';
+    display:block;
+    position: absolute;
+    border-radius:50%;
+    border:1px solid #25d366;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    top: -20px;
+    animation: animate 1.5s linear infinite;
+    opacity:0;
+    backface-visibility:hidden;    
+}
+.pulsaDelay:after { animation-delay: .5s; }
+@keyframes animate {
+   0%   { transform: scale(0.5); opacity:0; }
+   50%  { opacity:1; }
+   100% { transform: scale(1.2); opacity:0; }
+}
+
+/* FIM BOTAO WHATSAPP */
+
 
 header p{
     text-align: center;
@@ -531,6 +581,34 @@ width: 300px;
     width: 80%;
 }
 
+#afiliados{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(220, 172, 15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 79px;
+    background-color: #180051;
+}
+
+#afiliados a .botao-plano{
+    font-size: 20px;
+    
+    padding: 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#afiliados a{
+    text-decoration: none;
+}
+
+#afiliados ion-icon{
+    font-size: 30px;
+}
+
 /* FIM CODIGO */
 /* INICIO RESPONSIVO */
 
@@ -630,7 +708,7 @@ width: 300px;
             font-size: 18px;
             font-weight: 600;
             margin: 0px;
-            padding: 0px 20px;
+            padding: 0px 30px;
             text-align: center;
         }
 
@@ -769,10 +847,11 @@ width: 300px;
         }
 
         #container-prof {
-            padding: 0 0;
+            padding: 20px 10px;
             background-color: hsl(30, 100%, 95%);
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-around;
         }
 
         #foto-prof {
@@ -798,6 +877,15 @@ width: 300px;
             font-weight: 300;
             width: 100%;
         }   
+
+        #afiliados{
+            font-size: 15px;
+            padding: 15px;
+        }
+
+        #afiliados a .botao-plano{
+            font-size: 15px;
+        }
 }
 
 /* FIM CELULAR */
@@ -818,7 +906,7 @@ width: 300px;
             font-size: 18px;
             font-weight: 600;
             margin: 0px;
-            padding: 0px 20px;
+            padding: 0px 30px;
             text-align: center;
         }
 
@@ -957,11 +1045,22 @@ width: 300px;
         }
 
         #container-prof {
-            padding: 0 0;
+            padding: 20px 10px;
             background-color: hsl(30, 100%, 95%);
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-around;
         }
+
+        #afiliados{
+            font-size: 20px;
+        }
+
+        #afiliados a .botao-plano{
+            font-size: 15px;
+        }
+
+        
 
         #foto-prof {
             width: auto;
@@ -982,7 +1081,7 @@ width: 300px;
         #sub-prof {
             font-size: 1rem;
             margin-left: 0px;
-            color: #434343;
+            color: #1e0303;
             font-weight: 300;
             width: 100%;
         }   
